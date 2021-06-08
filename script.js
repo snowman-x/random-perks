@@ -279,71 +279,31 @@ function create_perk_list(perks) {
     });
 }
 
-function create_tables(perks) {
-    const container = document.getElementById('container');
-    container.innerHTML = '';
-
-    const pages = array_chunk(perks, 15);
-    let pageNumber = 1;
-    pages.forEach(page => {
-        const h2 = document.createElement('h2');
-        h2.innerText = 'Page. ' + (pageNumber++);
-        container.append(h2);
-
-        const perk_container = document.createElement('div');
-        perk_container.classList.add('perk_container');
-        container.append(perk_container);
-
-        const perks_table = document.createElement('table');
-        perks_table.classList.add('perks');
-        perk_container.append(perks_table);
-
-        const perks_rows = array_chunk(page, 5);
-        let row_count = 0;
-        perks_rows.forEach(perks => {
-            const table_row = perks_table.insertRow(-1)
-            if (row_count % 2) {
-                const cell = document.createElement('td')
-                const div = document.createElement('div');
-                div.classList.add('perk');
-                cell.append(div);
-                table_row.append(cell);
-            }
-
-            perks.forEach(perk => {
-                {
-                    const cell = document.createElement('td');
-                    const perk_div = document.createElement('div');
-                    perk_div.classList.add('perk');
-                    cell.append(perk_div);
-                    const perk_img = document.createElement('img');
-                    perk_img.src = perk.src;
-                    perk_img.alt = perk.name;
-                    perk_div.append(perk_img);
-                    table_row.append(cell);
-                    perk.img = perk_img;
-                }
-
-                {
-                    const cell = document.createElement('td')
-                    const div = document.createElement('div');
-                    div.classList.add('perk');
-                    cell.append(div);
-                    table_row.append(cell);
-                }
-            });
-
-            row_count++;
-        });
-        // const rows = array_chunk(page, 5);
-    });
-}
-
 function get_random(min, max) {
     return Math.trunc(Math.random() * (max + 1 - min)) + min;
 }
 
+function resetImages() {
+    const ids = [
+        'first_perk_area',
+        'second_perk_area',
+        'third_perk_area',
+        'fourth_perk_area',
+    ];
+
+    ids.forEach(id => {
+        const area = document.getElementById(id);
+        const image = area.querySelector('img');
+        image.src = './images/pgjsf.png';
+        image.alt = '';
+
+        const h3 = area.querySelector('h3');
+        h3.innerText = '---';
+    });
+}
+
 function choice(perks) {
+    resetImages();
     create_perk_list(perks);
 
     const min = 0;
@@ -356,24 +316,29 @@ function choice(perks) {
         }
 
         const perk = perks[index];
-        if (!perk.name) {
+        if (!perk || !perk.name || perk.name === '') {
+            continue;
+        }
+
+        perk.img.classList.add('selected');
+
+        let id = '';
+        if (selected.length === 0) {
+            id ='first_perk_area';
+        } else if (selected.length === 1) {
+            id ='second_perk_area';
+        } else if (selected.length === 2) {
+            id ='third_perk_area';
+        } else if (selected.length === 3) {
+            id ='fourth_perk_area';
+        }
+
+        if (!id) {
+            selected.pop();
             continue;
         }
 
         selected.push(index);
-        perk.img.classList.add('selected');
-
-        let id = '';
-        switch (selected.length) {
-            case 1: id ='first_perk_area'; break;
-            case 2: id ='second_perk_area'; break;
-            case 3: id ='third_perk_area'; break;
-            case 4: id ='fourth_perk_area'; break;
-        }
-
-        if (!id) {
-            continue;
-        }
 
         const area = document.getElementById(id);
         const image = area.querySelector('img');
