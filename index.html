@@ -14,8 +14,16 @@
             window.survivor_perks = get_survivor_perks();
             window.killer_perks = get_killer_perks();
 
-            const perks = window.survivor_perks;
-            create_perk_list(perks);
+            function loadImage(perk) {
+                const img = document.createElement('img');
+                img.src = perk.src;
+            }
+            
+            window.survivor_perks.forEach(loadImage);
+            window.killer_perks.forEach(loadImage);
+
+            // const perks = window.survivor_perks;
+            // create_perk_list(perks);
 
             const survivor_button = document.getElementById('survivor_button');
             survivor_button.addEventListener('click', event => {
