@@ -259,6 +259,7 @@ function create_perk_list(perks) {
                 perk_list.classList.add('perk_row_bottom');
             }
 
+            let position = 1;
             row_perks.forEach(perk => {
                 const div = document.createElement('div');
                 const img = document.createElement('img');
@@ -266,8 +267,10 @@ function create_perk_list(perks) {
                 img.alt = perk.name;
                 img.classList.add('perk_image');
                 perk.img = img;
+                perk.position = pageNumber + 'ページ<br>' + rowNumber + '段目<br>左から' + position + '個目';
                 div.append(img);
                 perk_list.append(div);
+                position++;
             });
 
             perk_page.append(perk_list);
@@ -347,5 +350,8 @@ function choice(perks) {
 
         const h3 = area.querySelector('h3');
         h3.innerText = perk.name;
+
+        const h4 = area.querySelector('h4');
+        h4.innerHTML = '<span>' + perk.position + '</span>';
     }
 }

@@ -77,7 +77,7 @@ img.perk_image.selected {
     background-size: contain;
 }
 
-h3 {
+h3, h4 {
     color: #000000;
     text-shadow:
          2px  2px 1px #CCC,
