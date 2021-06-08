@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dead by Daylight Random Perks</title>
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script>
+        window.addEventListener('load', event => {
+            window.survivor_perks = get_survivor_perks();
+            window.killer_perks = get_killer_perks();
+
+            const perks = window.survivor_perks;
+            create_perk_list(perks);
+
+            const survivor_button = document.getElementById('survivor_button');
+            survivor_button.addEventListener('click', event => {
+                choice(window.survivor_perks);
+            });
+
+            const killer_button = document.getElementById('killer_button');
+            killer_button.addEventListener('click', event => {
+                choice(window.killer_perks);
+            });
+        });
+    </script>
+</head>
+<body>
+
+<div class="button_container">
+    <div class="button_area">
+        <button id="survivor_button">サバイバー パークランダム選出</button>
+    </div>
+    <div class="button_area">
+        <button id="killer_button">キラー パークランダム選出</button>
+    </div>
+</div>
+
+<div class="choose_perk_container">
+    <div class="choose_perk_area" id="first_perk_area">
+        <img src="./images/pgjsf.png" alt="">
+        <h3 style="text-align: center;">---</h3>
+    </div>
+    <div class="choose_perk_area" id="second_perk_area">
+        <img src="./images/pgjsf.png" alt="">
+        <h3 style="text-align: center;">---</h3>
+    </div>
+    <div class="choose_perk_area" id="third_perk_area">
+        <img src="./images/pgjsf.png" alt="">
+        <h3 style="text-align: center;">---</h3>
+    </div>
+    <div class="choose_perk_area" id="fourth_perk_area">
+        <img src="./images/pgjsf.png" alt="">
+        <h3 style="text-align: center;">---</h3>
+    </div>
+</div>
+
+<div id="all_perk_container">
+</div>
+
+</body>
+</html>
