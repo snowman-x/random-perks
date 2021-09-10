@@ -140,96 +140,99 @@ function get_killer_perks() {
         { src: './images/Starstruck.png', name: 'スターに憧れて' },
 
         { src: './images/deathbound.png', name: 'デスバウンド' },
+        { src: './images/deadlock.png', name: 'デッドロック' },
         { src: './images/dragonsGrip.png', name: 'ドラゴンの掌握' },
         { src: './images/knockOut.png', name: 'ノックアウト' },
         { src: './images/BBQAndChili.png', name: 'バーベキュー＆チリ' },
+
+
         { src: './images/coulrophobia.png', name: 'ピエロ恐怖症' },
-
-
         { src: './images/fireUp.png', name: 'ファイヤー・アップ' },
         { src: './images/franklinsLoss.png', name: 'フランクリンの悲劇' },
         { src: './images/mindBreaker.png', name: 'マインドブレーカー' },
         { src: './images/rememberMe.png', name: 'リメンバー・ミー' },
-        { src: './images/discordance.png', name: '不協和音' },
 
+        { src: './images/discordance.png', name: '不協和音' },
         { src: './images/unnervingPresence.png', name: '不安の元凶' },
         { src: './images/enduring.png', name: '不屈' },
         { src: './images/infectiousFright.png', name: '伝播する怖気' },
         { src: './images/lightborn.png', name: '光より出でし者' },
-        { src: './images/hangmansTrick.png', name: '処刑人の妙技' },
 
+        { src: './images/hangmansTrick.png', name: '処刑人の妙技' },
         { src: './images/HexCrowdControl.png', name: '呪術：クラウドコントロール' },
         { src: './images/hexUndying.png', name: '呪術：不死' },
         { src: './images/hexRetribution.png', name: '呪術：報復' },
         { src: './images/HuntressLullaby.png', name: '呪術:女狩人の子守唄' },
+
+
         { src: './images/thrillOfTheHunt.png', name: '呪術：狩りの興奮' },
-
-
+        { src: './images/hexPlaything.png', name: '玩具' },
         { src: './images/ruin.png', name: '呪術：破滅' },
         { src: './images/theThirdSeal.png', name: '呪術：第三の封印' },
         { src: './images/hexBloodFavor.png', name: '呪術：血の恩恵' },
+
         { src: './images/noOneEscapesDeath.png', name: '呪術:誰も死から逃れられない' },
         { src: './images/devourHope.png', name: '呪術:貪られる希望' },
-
         { src: './images/hauntedGround.png', name: '呪術：霊障の地' },
         { src: './images/stridor.png', name: '喘鳴' },
         { src: './images/whispers.png', name: '囁き' },
+
         { src: './images/overwhelmingPresence.png', name: '圧倒的存在感' },
         { src: './images/imAllEars.png', name: '地獄耳' },
-
         { src: './images/corruptIntervention.png', name: '堕落の介入' },
         { src: './images/gearHead.png', name: '変速機' },
         { src: './images/nemesis.png', name: '天誅' },
+
+
         { src: './images/playWithYourFood.png', name: '弄ばれる獲物' },
         { src: './images/forcedPenance.png', name: '強制苦行' },
-
-
         { src: './images/spiesFromTheShadows.png', name: '影の密偵' },
         { src: './images/deerstalker.png', name: '忍び寄る者' },
         { src: './images/hatred.png', name: '怨恨' },
-        { src: './images/spiritFury.png', name: '怨霊の怒り' },
-        { src: './images/bitterMurmur.png', name: '憎悪の囁き' },
 
+        { src: './images/spiritFury.png', name: '怨霊の怒り' },
+        { src: './images/scourgeHookGiftOfPain.png', name: '悶絶のフック：苦痛という名の贈り物' },
+        { src: './images/bitterMurmur.png', name: '憎悪の囁き' },
         { src: './images/thrillingTremors.png', name: '戦慄' },
         { src: './images/predator.png', name: '捕食者' },
+
         { src: './images/saveTheBestForLast.png', name: '最後のお楽しみ' },
         { src: './images/lethalPursuer.png', name: '死を呼ぶ追跡者' },
         { src: './images/deadManSwitch.png', name: '死人のスイッチ' },
-
         { src: './images/thatanophobia.png', name: '死恐怖症' },
         { src: './images/zanshinTactics.png', name: '残心の戦術' },
+
+
         { src: './images/dyingLight.png', name: '消えゆく灯' },
         { src: './images/Hoarder.png', name: '溜め込み屋' },
         { src: './images/unrelenting.png', name: '無慈悲' },
-
-
         { src: './images/cruelConfinement.png', name: '無慈悲の極地' },
         { src: './images/trailOfTorment.png', name: '煩悶のトレイル' },
+
         { src: './images/madGrit.png', name: '狂気の根性' },
         { src: './images/insidious.png', name: '狡猾' },
         { src: './images/BeastOfPrey.png', name: '猛獣' },
-
         { src: './images/monstrousShrine.png', name: '異形の祭壇' },
         { src: './images/surveillance.png', name: '監視' },
+
         { src: './images/aNursesCalling.png', name: '看護師の使命' },
         { src: './images/TerritorialImperative.png', name: '縄張り意識' },
         { src: './images/agitation.png', name: '興奮' },
-
         { src: './images/distressing.png', name: '苦悶の根源' },
         { src: './images/bloodEcho.png', name: '血の共鳴' },
+
         { src: './images/bloodWarden.png', name: '血の番人' },
         { src: './images/bloodhound.png', name: '血の追跡者' },
         { src: './images/NoWayOut.png', name: '袋小路' },
-
-
         { src: './images/monitorAndAbuse.png', name: '観察＆虐待' },
         { src: './images/Oppression.png', name: '迫害' },
+
         { src: './images/makeYourChoice.png', name: '選択は君次第だ' },
         { src: './images/brutalStrength.png', name: '野蛮な力' },
         { src: './images/ironGrasp.png', name: '鋼の握力' },
-
         { src: './images/darkDevotion.png', name: '闇の信仰心' },
         { src: './images/shadowborn.png', name: '闇より出でし者' },
+
         { src: './images/furtiveChase.png', name: '隠密の追跡' },
         { src: './images/hysteria.png', name: '集団ヒステリー' },
     ];
